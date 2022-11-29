@@ -13,14 +13,12 @@
 
 char *builtin_str[] = {
   "cd",
-  "help",
   "exit"
 };
 
 int (*builtin_func[]) (char **) = {
-  &lsh_cd,
-  &lsh_help,
-  &lsh_exit
+  &func_cd,
+  &exit_pro,
 };
 
 int main(int argc, char **argv);
