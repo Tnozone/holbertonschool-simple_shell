@@ -1,3 +1,5 @@
+#include "shell.h"
+
 int func_cd(char **args)
 {
 	if (args[1] == NULL)
