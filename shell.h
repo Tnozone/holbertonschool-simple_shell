@@ -10,7 +10,6 @@
 #include <fcntl.h>
 #include <sys/stat.h>
 #include <dirent.h>
-#include <dir.h>
 
 char *builtin_str[] = {
   "cd",
