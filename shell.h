@@ -11,5 +11,5 @@
 #include <sys/stat.h>
 #include <dirent.h>
 
-
+int _strcmp(char *s1, char *s2);
 #endif
