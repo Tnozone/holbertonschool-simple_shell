@@ -10,6 +10,7 @@
 #include <fcntl.h>
 #include <sys/stat.h>
 #include <dirent.h>
+#include <dir.h>
 
 char *builtin_str[] = {
   "cd",
@@ -30,5 +31,8 @@ char *read_line(void);
 char **split_ligne_arg(char *line);
 int start(char **args);
 int lsh_execute(char **args);
+int func_cd(char **args);
+int exit_pro(char **args);
+int lsh_num_builtins();
 
 #endif

@@ -1,3 +1,5 @@
+#include "shell.h"
+
 #define LSH_TOK_DELIM " \t\r\n\a"
 char **split_ligne_arg(char *line)
 {

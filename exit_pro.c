@@ -1,3 +1,5 @@
+#include "shell.h"
+
 int exit_pro(char **args)
 {
   return 0;
