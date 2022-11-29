@@ -23,5 +23,12 @@ int (*builtin_func[]) (char **) = {
   &lsh_exit
 };
 
+int main(int argc, char **argv);
+void prompt(void);
 int _strcmp(char *s1, char *s2);
+char *read_line(void);
+char **split_ligne_arg(char *line);
+int start(char **args);
+int lsh_execute(char **args);
+
 #endif
