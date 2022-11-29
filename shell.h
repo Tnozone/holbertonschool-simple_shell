@@ -11,5 +11,17 @@
 #include <sys/stat.h>
 #include <dirent.h>
 
+char *builtin_str[] = {
+  "cd",
+  "help",
+  "exit"
+};
+
+int (*builtin_func[]) (char **) = {
+  &lsh_cd,
+  &lsh_help,
+  &lsh_exit
+};
+
 int _strcmp(char *s1, char *s2);
 #endif
