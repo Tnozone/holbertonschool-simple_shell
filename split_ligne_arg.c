@@ -9,7 +9,7 @@ char **split_ligne_arg(char *line)
 
 	if (!tokens)
 	{
-		perror("Allocation error\n");
+		write(2, "Allocation error\n", 17);
 		exit(EXIT_FAILLURE);
 	}
 
@@ -21,7 +21,7 @@ char **split_ligne_arg(char *line)
 		i++;
 		if (!tokens)
 		{
-			perror("Allocation error\n");
+			write(2, "Allocation error\n", 17);
 			exit(EXIT_FAILURE);
 		}
 		token = strtok(NULL, LSH_TOK_DELIM);
