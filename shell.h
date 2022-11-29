@@ -2,24 +2,10 @@
 #define _SHELL_H_
 
 #include <sys/wait.h>
-#include <sys/types.h>
 #include <unistd.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-#include <fcntl.h>
-#include <sys/stat.h>
-#include <dirent.h>
-
-char *builtin_str[] = {
-  "cd",
-  "exit"
-};
-
-int (*builtin_func[]) (char **) = {
-  &func_cd,
-  &exit_pro,
-};
 
 int main(int argc, char **argv);
 void prompt(void);
