@@ -5,7 +5,12 @@ Simple Shell is the the last project of the trimester, and the second collaborat
 ## Description
 Shell is a command interpreter: the shell technique is an infinite loop in C that reads what the user types in the promp and performs the appropriate actions. Either it's an internal shell command that's executed directly (internal functions), or it's an external program.
 
-#### Prototype
+There are three parts to running a command:
+* Read: Read the command from standard input.
+* Parse: Separate the command string into a program and arguments.
+* Execute: Run the parsed command.
+
+#### Prototypes
 ```
 -
 ```
