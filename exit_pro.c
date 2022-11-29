@@ -1,6 +1,6 @@
 #include "shell.h"
 
-int exit_pro(char **args)
+int exit_pro(__attribute__((unused))char **args)
 {
   return 0;
 }
