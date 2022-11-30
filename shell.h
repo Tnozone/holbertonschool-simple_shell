@@ -1,28 +1,41 @@
-#ifndef _SHELL_H_
-#define _SHELL_H_
+#ifndef __SIMPLE_SHELL__
+#define __SIMPLE_SHELL__
 
-#include <sys/wait.h>
-#include <sys/types.h>
-#include <unistd.h>
-#include <stdlib.h>
+#define IN 1
+#define OUT 0
+
+extern char **environ;
+
+typedef struct control
+{
+	char *saisi;
+	int (*f)(char *cmd, char **args, char **env);
+} control_t;
+
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+#include <signal.h>
 
-int lsh_cd(char **args);
-int lsh_help(char **args);
-int lsh_exit(char **args);
+void print_pr(void);
+int start(char *buff, char **env, int line);
+int exec_path(char **args, char **env, int line);
+char *path_func(char *cmd, char *PATH);
 
+/* Builtin helpers functions */
 
-int main(__attribute__((unused))int argc, __attribute__((unused))char **argv);
-void prompt(void);
-int _strcmp(char *s1, char *s2);
-char *read_line(void);
-char **split_ligne_arg(char *line);
-int start(char **args);
-int lsh_execute(char **args);
-int func_cd(char **args);
-int exit_pro(__attribute__((unused))char **args);
-int lsh_help(__attribute__((unused))char **args);
-int lsh_num_builtins();
+int (*control_saisi(char *saisi))(char *cmd, char **args, char **env);
+int func_exit(char *cmd, char **args, char **env);
+
+/* Strings functions */
+
+char **func_tok(char *buf);
+size_t numberchar(char *s);
+void free_tokens(char **tokens);
+int print_env(char *comande, char **arg, char **envi);
+void func_signal(__attribute__((unused)) int signal);
 
 #endif

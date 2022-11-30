@@ -6,6 +6,7 @@
  *@envi: array of strings of the envi
  *Return: always 0 (success)
  */
+/**
 int print_env(char *comande, char **arg, char **envi)
 {
 	unsigned int i = 0;
@@ -20,3 +21,4 @@ int print_env(char *comande, char **arg, char **envi)
 	}
 	return (0);
 }
+*/

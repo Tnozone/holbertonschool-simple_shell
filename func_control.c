@@ -9,7 +9,6 @@ int (*control_saisi(char *saisi))(char *cmd, char **args, char **env)
 	int i;
 	control_t tbs[] = {
 		{"exit", func_exit},
-		{"env", print_env},
 		{NULL, NULL},
 	};
 
