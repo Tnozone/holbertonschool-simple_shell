@@ -4,7 +4,7 @@
  * @saisi: command entered by user
  * Return: (NULL)
  */
-int (*control_saisi(char *saisi))(char *cmd, char **args, char **env)
+int (*control_saisii(char *saisi))(char *cmd, char **args, char **env)
 {
 	int i;
 	control_t tbs[] = {
