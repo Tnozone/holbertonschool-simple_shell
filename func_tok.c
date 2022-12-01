@@ -6,7 +6,6 @@
  * @buf: The buffer receive
  * Return: (args)
  */
-/**
 char **func_tok(char *buf)
 {
 	int size = BUFSIZE;
@@ -34,7 +33,7 @@ char **func_tok(char *buf)
 	tokens[i] = NULL;
 	return (tokens);
 }
-*/
+/**
 char **func_tok(char *buff)
 {
 	int size = BUFSIZE;
@@ -56,4 +55,5 @@ char **func_tok(char *buff)
 	tokens[i] = NULL;
 	return (tokens);
 }
+*/
 
