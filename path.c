@@ -9,36 +9,42 @@
 int exec_path(char **args, char **env, __attribute__((unused))int line)
 {
 	pid_t pidchild;
-	char *fullpath = NULL;
+	char *path = NULL;
 	char *PATH;
 
 	PATH = getenv("PATH");/*recuperer variable d'environement systeme*/
 
 	if (!PATH && execve(args[0], args, env) == -1)
 	{
-		free(fullpath);
+		free(path);
 		return (134);
 	}
 	else
 	{
 		PATH = strdup(PATH);
-		fullpath = path_func(args[0], PATH);
+		path = path_func(args[0], PATH);
 		free(PATH);
 
 		pidchild = fork();
+
 		if (pidchild == 0)
 		{
-			if ((execve(fullpath, args, env)) == -1)
+			if ((execve(path, args, env)) == -1)
 			{
-				free(fullpath);
+				free(path);
 				return (134);
 			}
 		}
 
 		else if (pidchild > 0)
-		  wait(NULL);
+			wait(NULL);
 
+		else
+		{
+			free(path);
+		}
 	}
-
+	if (path)
+		free(path);
 	return (0);
 }
