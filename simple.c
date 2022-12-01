@@ -24,6 +24,8 @@ int main(__attribute__((unused))int i, char **argc, char **argv)
 		read = getline(&buf, &bufsize, stdin);
 		if (read == -1)
 		{
+			if (buf)
+				free(buf);
 			if (feof(stdin))
 				exit(EXIT_SUCCESS);
 			exit(EXIT_FAILURE);
