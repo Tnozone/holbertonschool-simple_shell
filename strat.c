@@ -21,17 +21,17 @@ int start(char *buff, char **env, int line)
 		{
 			if (f(tabtok[0], tabtok, env) == 133)
 			{
-				free(tabtok);
+				free_tab(tabtok);
 				return (133);
 			}
 		}
 		else
 		{
 			start = exec_path(tabtok, env, line);
-			free(tabtok);
+			free_tab(tabtok);
 			return (start);
 		}
 	}
-	free(tabtok);
+	free_tab(tabtok);
 	return (0);
 }
