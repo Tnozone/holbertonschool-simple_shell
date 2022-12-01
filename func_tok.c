@@ -33,27 +33,4 @@ char **func_tok(char *buf)
 	tokens[i] = NULL;
 	return (tokens);
 }
-/**
-char **func_tok(char *buff)
-{
-	int size = BUFSIZE;
-	char **tokens = NULL;
-	char *arg = NULL;
-	int i = 0;
-
-	tokens = malloc(size * sizeof(char*));
-	if (!tokens)
-		return (NULL);
-	arg = strtok(buff, DELIM);
-
-	while (arg != NULL)
-	{
-		tokens[i] = strdup(arg);
-		arg = strtok(NULL, DELIM);
-		i++;
-	}
-	tokens[i] = NULL;
-	return (tokens);
-}
-*/
 
