@@ -16,11 +16,11 @@ There are three parts to running a command:
 ```
 
 ## Project
--
+For this project, we have made a prompt which recognizes commands typed into it and executes a shell command.
 
 ## Requirements
 
-* Compiled command: ```-Wall -Werror -Wextra -pedantic -std=gnu89```
+* Compiled command: ```-Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh```
 * Header files should be include guarded.
 * Prototypes should be included in header file.
 * No more than five functions per file.
@@ -28,7 +28,17 @@ There are three parts to running a command:
 * Files follow the ```Betty``` style.
 
 ## Examples
--
+```ls```
+######Result
+A list of the files in the directory appears.
+
+```cd holberton_low_level_programming```
+######Result
+Current working directory changes to holberton_low_level_programming.
+
+```exit```
+######Result
+The loop stops and the prompt disappears.
 
 ## Authors
 Ali Segue, Yoko Ono, and Maxime Nocquet
