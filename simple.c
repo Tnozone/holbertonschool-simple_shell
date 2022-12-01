@@ -31,6 +31,7 @@ int main(__attribute__((unused))int i, char **argc, char **argv)
 		else
 		{
 			bon = start(buf, argv, line);
+			free(buf);
 			if (bon == 133)
 				exit(EXIT_SUCCESS);
 		}
