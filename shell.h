@@ -19,7 +19,7 @@ typedef struct control
 #include <sys/types.h>
 #include <sys/wait.h>
 #include <signal.h>
-
+void free_tab (char **tabtok);
 void print_pr(void);
 int start(char *buff, char **env, int line);
 int exec_path(char **args, char **env, int line);
