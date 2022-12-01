@@ -9,24 +9,29 @@
 int start(char *buff, char **env, int line)
 {
 	int start = 0;
-	char **arg = NULL;
+	char **tabtok = NULL;
 	int (*f)(char *cmd, char **args, char **env);
 
-	arg = func_tok(buff);
-	if (arg[0])
+	tabtok = func_tok(buff);
+	if (tabtok[0])
 	{
-		f = control_saisii(arg[0]);
+		f = control_saisii(tabtok[0]);
 
 		if (f != NULL)
 		{
-			if (f(arg[0], arg, env) == 133)
+			if (f(tabtok[0], tabtok, env) == 133)
+			{
+				free(tabtok);
 				return (133);
+			}
 		}
 		else
 		{
-			start = exec_path(arg, env, line);
+			start = exec_path(tabtok, env, line);
+			free(tabtok);
 			return (start);
 		}
 	}
+	free(tabtok);
 	return (0);
 }
