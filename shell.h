@@ -27,7 +27,7 @@ char *path_func(char *cmd, char *PATH);
 
 /* Builtin helpers functions */
 
-int (*control_saisi(char *saisi))(char *cmd, char **args, char **env);
+int (*control_saisii(char *saisi))(char *cmd, char **args, char **env);
 int func_exit(char *cmd, char **args, char **env);
 
 /* Strings functions */

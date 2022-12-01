@@ -10,12 +10,23 @@ int start(char *buff, char **env, int line)
 {
 	int start = 0;
 	char **arg = NULL;
+	int (*f)(char *cmd, char **args, char **env);
 
 	arg = func_tok(buff);
 	if (arg[0])
 	{
-		start = exec_path(arg, env, line);
-		return (start);
+		f = control_saisii(arg[0]);
+
+		if (f != NULL)
+		{
+			if (f(arg[0], arg, env) == 133)
+				return (133);
+		}
+		else
+		{
+			start = exec_path(arg, env, line);
+			return (start);
+		}
 	}
 	return (0);
 }
