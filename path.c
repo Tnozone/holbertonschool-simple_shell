@@ -38,7 +38,6 @@ int exec_path(char **args, char **env, __attribute__((unused))int line)
 
 		else if (pidchild > 0)
 			wait(NULL);
-
 		else
 		{
 			free(path);
