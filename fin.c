@@ -13,7 +13,7 @@ char *path_func(char *cmd, char *PATH)
 	p_item = strtok(PATH, ":");
 	while (p_item)
 	{
-		path = malloc(sizeof(char)*(strlen(cmd) + strlen(p_item)) + 2);
+		path = malloc(sizeof(char) * (strlen(cmd) + strlen(p_item)) + 2);
 		path = strcpy(path, p_item);
 		path = strcat(path, "/");
 		path = strcat(path, cmd);

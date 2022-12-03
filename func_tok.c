@@ -33,4 +33,3 @@ char **func_tok(char *buf)
 	tokens[i] = NULL;
 	return (tokens);
 }
-

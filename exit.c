@@ -1,6 +1,6 @@
 #include "shell.h"
 /**
- *new_exit - function for exiting the program
+ *func_exit - function for exiting the program
  *@cmd: comand entered by user
  *@args: array of arguments
  *@env: array of strings of env

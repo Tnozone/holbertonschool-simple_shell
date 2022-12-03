@@ -19,19 +19,14 @@ typedef struct control
 #include <sys/types.h>
 #include <sys/wait.h>
 #include <signal.h>
+
 void free_tab (char **tabtok);
 void print_pr(void);
 int start(char *buff, char **env, int line);
 int exec_path(char **args, char **env, int line);
 char *path_func(char *cmd, char *PATH);
-
-/* Builtin helpers functions */
-
 int (*control_saisii(char *saisi))(char *cmd, char **args, char **env);
 int func_exit(char *cmd, char **args, char **env);
-
-/* Strings functions */
-
 char **func_tok(char *buf);
 size_t numberchar(char *s);
 void free_tokens(char **tokens);

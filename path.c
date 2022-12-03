@@ -12,7 +12,7 @@ int exec_path(char **args, char **env, __attribute__((unused))int line)
 	char *path = NULL;
 	char *PATH;
 
-	PATH = getenv("PATH");/*recuperer variable d'environement systeme*/
+	PATH = getenv("PATH");/* recuperer variable d'environement systeme */
 
 	if (!PATH && execve(args[0], args, env) == -1)
 	{

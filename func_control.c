@@ -1,6 +1,6 @@
 #include "shell.h"
 /**
- * control_saisi - That control if saisi exists.
+ * control_saisii - That control if saisi exists.
  * @saisi: command entered by user
  * Return: (NULL)
  */
