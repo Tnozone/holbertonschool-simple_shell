@@ -10,7 +10,7 @@ char *path_func(char *cmd, char *PATH)
 	char *p_item = NULL;
 	char *path = NULL;
 	int lencmd = 0, lenitem = 0;
-	
+
 	p_item = strtok(PATH, ":");
 
 	while (cmd[lencmd] != '\0')
@@ -18,7 +18,7 @@ char *path_func(char *cmd, char *PATH)
 
 	while (p_item[lenitem] != '\0')
 	  lenitem++;
-	
+
 	while (p_item)
 	{
 		path = malloc(sizeof(char) * (lencmd + lenitem) + 2);

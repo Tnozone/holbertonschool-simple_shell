@@ -1,21 +1,22 @@
 #include "shell.h"
-
 /**
- * *_strcpy - copies a string
- * @dest: destination buffer
- * @src: string
- * Return: dest
+ * _strcpy -9. strcpy
+ * @src: variable copie
+ * @dest: variable destination
+ *
+ * Return: (dest)
  */
-
 char *_strcpy(char *dest, char *src)
+
 {
-  int x = 0, len = 0;
+		int i = 0;
 
-  while (src[len] != '\0')
-    len++;
+		while (src[i] != '\0')
+		{
+			(dest[i]) = (src[i]);
+			i++;
+		}
+		(dest[i]) = '\0';
+		return (dest);
 
-  for (x = 0; x <= len; x++)
-    dest[x] = src[x];
-
-  return (dest);
 }

@@ -1,29 +1,36 @@
 #include "shell.h"
-
 /**
- * *_strdup - returns a pointer to allocated space
- * @str: string
- * Return: pointer
+ * _strdup - Écrivez une fonction qui renvoie un pointeur vers un espace nv
+ * @str: a copier
+ * Return: (ar) ou (NULL)
  */
-
 char *_strdup(char *str)
 {
-  char *array;
-  int i, x;
 
-  if (str == NULL)
-    return (NULL);
+	char *ar;
+	int i, j;
 
-  for (i = 0; str[i] != '\0'; i++)
-    ;
+	if (str == NULL)
+	{
+		return (NULL);
+	}
 
-  array = malloc((sizeof(char) * i) +1);
+	for (i = 0; str[i] != '\0'; i++)
+		;
 
-  if (array == NULL)
-    return (NULL);
+	i++;
 
-  for (x = 0; x < i; x++)
-    array[x] = str[x];
+	ar = malloc(i * sizeof(char));
 
-  return (array);
+	if (ar == NULL)
+	{
+		return (NULL);
+	}
+
+	for (j = 0; j < i; j++)
+	{
+		ar[j] = str[j];
+	}
+
+	return (ar);
 }
