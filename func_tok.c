@@ -25,7 +25,7 @@ char **func_tok(char *buf)
 
 	while (token != NULL)
 	{
-		tokens[i] = strdup(token);
+		tokens[i] = _strdup(token);
 		token = strtok(NULL, DELIM);
 		i++;
 	}
