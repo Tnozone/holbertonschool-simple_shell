@@ -4,12 +4,12 @@
  *@cmd: comand entered by user
  *@args: array of arguments
  *@env: array of strings of env
- *Return: 133 for success
+ *Return: 1 for success
  */
 int func_exit(char *cmd, char **args, char **env)
 {
 	(void)cmd;
 	(void)args;
 	(void)env;
-	return (133);
+	return (1);
 }
