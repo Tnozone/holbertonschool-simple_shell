@@ -30,5 +30,6 @@ int exec_path(char **args, char **env, int line);
 char *path_func(char *cmd, char *PATH);
 int func_exit(char *cmd, char **args, char **env);
 char **func_tok(char *buf);
+int _strcmp(char *s1, char *s2);
 
 #endif
