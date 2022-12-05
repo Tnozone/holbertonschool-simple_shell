@@ -11,9 +11,19 @@ There are three parts to running a command:
 * **Execute**: Run the parsed command.
 
 #### Prototypes
-```
--
-```
+```int main(__attribute__((unused))int i, char **argc, char **argv)```
+```void print_pr(void)```
+```int start(char *buff, char **env, int line)```
+```int (*control_saisii(char *saisi))(char *cmd, char **args, char **env)```
+```void free_tab(char **tabtok)```
+```int exec_path(char **args, char **env, int line)```
+```char *path_func(char *cmd, char *PATH)```
+```int func_exit(char *cmd, char **args, char **env)```
+```char **func_tok(char *buf)```
+```int _strcmp(char *s1, char *s2)```
+```char *_strcat(char *dest, char *src)```
+```char *_strcpy(char *dest, char *src)```
+```char *_strdup(char *str)```
 
 ## Project
 For this project, we have made a prompt which recognizes commands typed into it and executes a shell command. The shell needs to:
