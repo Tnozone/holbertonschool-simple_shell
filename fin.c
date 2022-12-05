@@ -9,14 +9,22 @@ char *path_func(char *cmd, char *PATH)
 {
 	char *p_item = NULL;
 	char *path = NULL;
-
+	int lencmd = 0, lenitem = 0;
+	
 	p_item = strtok(PATH, ":");
+
+	while (cmd[lencmd] != '\0')
+	  lencmd++;
+
+	while (p_item[lenitem] != '\0')
+	  lenitem++;
+	
 	while (p_item)
 	{
-		path = malloc(sizeof(char) * (strlen(cmd) + strlen(p_item)) + 2);
-		path = strcpy(path, p_item);
-		path = strcat(path, "/");
-		path = strcat(path, cmd);
+		path = malloc(sizeof(char) * (lencmd + lenitem) + 2);
+		path = _strcpy(path, p_item);
+		path = _strcat(path, "/");
+		path = _strcat(path, cmd);
 		if (access(path, X_OK) == 0)
 			return (path);
 		free(path);
