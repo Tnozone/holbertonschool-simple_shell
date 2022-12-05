@@ -17,7 +17,7 @@ int exec_path(char **args, char **env, __attribute__((unused))int line)
 	if (!PATH && execve(args[0], args, env) == -1)
 	{
 		free(path);
-		return (134);
+		return (2);
 	}
 	else
 	{
@@ -32,7 +32,7 @@ int exec_path(char **args, char **env, __attribute__((unused))int line)
 			if ((execve(path, args, env)) == -1)
 			{
 				free(path);
-				return (134);
+				return (2);
 			}
 		}
 
