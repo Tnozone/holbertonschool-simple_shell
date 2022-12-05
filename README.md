@@ -80,6 +80,8 @@ For this project, we have made a prompt which recognizes commands typed into it 
 * ```wait4``` (man 2 wait4)
 * ```write``` (man 2 write)
 
+## Command Compilation
+
 ## Return
 
 ## Examples
