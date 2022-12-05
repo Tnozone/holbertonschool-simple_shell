@@ -14,7 +14,7 @@ int (*control_saisii(char *saisi))(char *cmd, char **args, char **env)
 
 	for (i = 0; tbs[i].saisi != NULL; i++)
 	{
-		if (strcmp(saisi, tbs[i].saisi) == 0)
+		if (_strcmp(saisi, tbs[i].saisi) == 0)
 			return (tbs[i].f);
 	}
 	return (NULL);
