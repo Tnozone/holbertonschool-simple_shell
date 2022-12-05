@@ -36,7 +36,7 @@ For this project, we have made a prompt which recognizes commands typed into it 
 * No more than 40 lines per function.
 * Files follow the ```Betty``` style.
 
-#### List of allowed functions and system calls
+### List of allowed functions and system calls
 
 * ```access``` (man 2 access)
 * ```chdir``` (man 2 chdir)
@@ -70,6 +70,8 @@ For this project, we have made a prompt which recognizes commands typed into it 
 * ```wait4``` (man 2 wait4)
 * ```write``` (man 2 write)
 
+## Return
+
 ## Examples
 ##### Input
 ```
@@ -84,6 +86,13 @@ exit
 ```
 ##### Result
 The loop stops and the prompt disappears.
+
+## Man page
+```man 1 simple_shell```
+
+## Memory Check
+
+## Bug Report
 
 ## Authors
 Ali Segue, Yoko Ono, and Maxime Nocquet
