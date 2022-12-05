@@ -19,10 +19,10 @@ int start(char *buff, char **env, int line)
 
 		if (f != NULL)
 		{
-			if (f(tabtok[0], tabtok, env) == 133)
+			if (f(tabtok[0], tabtok, env) == 1)
 			{
 				free_tab(tabtok);
-				return (133);
+				return (1);
 			}
 		}
 		else
