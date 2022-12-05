@@ -31,5 +31,5 @@ char *path_func(char *cmd, char *PATH)
 		path = NULL;
 		p_item = strtok(NULL, ":");
 	}
-	return (strdup(cmd));
+	return (_strdup(cmd));
 }
