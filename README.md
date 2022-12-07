@@ -81,6 +81,7 @@ For this project, we have made a prompt which recognizes commands typed into it 
 * ```write``` (man 2 write)
 
 ## Command Compilation
+```gcc simple.c```
 
 ## Return
 
@@ -103,8 +104,9 @@ The loop stops and the prompt disappears.
 ```man 1 simple_shell```
 
 ## Memory Check
+```valgrind --leak-check=yes```
 
 ## Bug Report
 
 ## Authors
-Ali Segue, Yoko Ono, and Maxime Nocquet
+Ali Segueg, Yoko Ono, and Maxime Nocquet
