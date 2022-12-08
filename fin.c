@@ -14,10 +14,10 @@ char *path_func(char *cmd, char *PATH)
 	p_item = strtok(PATH, ":");
 
 	while (cmd[lencmd] != '\0')
-	  lencmd++;
+		lencmd++;
 
 	while (p_item[lenitem] != '\0')
-	  lenitem++;
+		lenitem++;
 
 	while (p_item)
 	{

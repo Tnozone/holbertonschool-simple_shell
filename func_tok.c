@@ -17,7 +17,7 @@ char **func_tok(char *buf)
 	tokens = malloc(size * sizeof(char *));
 	if (!tokens)
 	{
-	  write(2, "Allocation error\n", 17);
+		write(2, "Allocation error\n", 17);
 		exit(EXIT_FAILURE);
 	}
 
