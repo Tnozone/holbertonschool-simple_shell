@@ -1,0 +1,31 @@
+.\"manpage simple_shell
+.\"
+.TH man 1 "07 December 2022" "1.0" "simple_shell man page"
+
+.SH NAME
+simple shell
+
+.SH SYNOPSIS
+$ 
+.RB [|ARGUMENTS|]…
+
+.SH DESCRIPTION
+Simple Shell is a command interpreter that is an infinite loop in C that reads what the user types in the promp and performs the appropriate actions. The program reads, parses, and executes the called on command.
+.P
+“Exit” is a built-in command that ends the program.
+
+.SH FILES
+shell.h, simple.c, strat.c, pront.c, func_tok.c, func_control.c, path.c, free_tab.c, exit.c, fin.c, _strcat.c, _strcmp.c, _strcpy.c, _strdup.c
+
+
+.SH EXAMPLES
+input:
+.IP ls
+
+output: a list of files in the current working directory.
+
+.SH SEE ALSO
+bash(1), exit(2)
+
+.SH AUTHORS
+Ali Segueg, Yoko One, and Maxime Nocquet
