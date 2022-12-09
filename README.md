@@ -39,7 +39,6 @@ For this project, we have made a prompt which recognizes commands typed into it 
 
 ## Requirements
 
-* Compiled command: ```-Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh```
 * Header files should be include guarded.
 * Prototypes should be included in header file.
 * No more than five functions per file.
@@ -81,9 +80,12 @@ For this project, we have made a prompt which recognizes commands typed into it 
 * ```write``` (man 2 write)
 
 ## Command Compilation
-```gcc simple.c```
+```gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh```
 
 ## Return
+
+## Flowchart
+<img width="672" alt="simple shell flowchart" src="https://user-images.githubusercontent.com/113909838/206671314-9587021b-b3e5-464d-9501-fb3db39cb9ab.png">
 
 ## Examples
 ##### Input
@@ -107,6 +109,14 @@ The loop stops and the prompt disappears.
 ```valgrind --leak-check=yes```
 
 ## Bug Report
+* Incorrect output when PATH is set to an empty string.
+* Incorrect ```ls``` output when all environment variables are removed.
+* Incorrect ```ls``` output when PATH variable is removed and a PATH1 variable is set.
+* Incorrect output when a command does not exist.
+* Wrong status when executing a command that fails and exiting without parameters.
+* The Exit command only works every other time.
+* Incorrect output when all environment variables except one are removed and ```env``` is executed.
+* Incorrect output when all environment variables are romeved and ```env``` is executed.
 
 ## Authors
 Ali Segueg, Yoko Ono, and Maxime Nocquet
